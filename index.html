@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TSI — Cybersecurity Study App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <div id="navbar-left">
+      <button id="hamburger" aria-label="Toggle sidebar">&#9776;</button>
+      <span id="app-logo">&#128737; TSI</span>
+      <span id="app-subtitle">Cybersecurity Study</span>
+    </div>
+    <div id="navbar-center">
+      <input type="text" id="search-input" placeholder="&#128269; Search concepts..." autocomplete="off" />
+    </div>
+    <div id="navbar-right">
+      <div id="streak-badge" title="Study streak">&#128293; <span id="streak-count">0</span> day streak</div>
+    </div>
+  </header>
+
+  <!-- ===== LAYOUT ===== -->
+  <div id="layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <nav id="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-item" data-view="dashboard">
+          <span class="sidebar-icon">&#128202;</span>
+          <span>Dashboard</span>
+        </div>
+      </div>
+
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-label">PHASES</div>
+
+      <div class="sidebar-section" id="phase-nav">
+        <div class="sidebar-item" data-view="phase-1">
+          <span class="sidebar-icon phase-1-text">&#128737;</span>
+          <div class="sidebar-item-content">
+            <span>Phase 1: Foundation</span>
+            <div class="mini-progress">
+              <div class="mini-progress-bar phase-1-bg" id="prog-phase-1" style="width:0%"></div>
+            </div>
+            <span class="sidebar-progress-label" id="prog-phase-1-label">0 / 27</span>
+          </div>
+        </div>
+        <div class="sidebar-item" data-view="phase-2">
+          <span class="sidebar-icon phase-2-text">&#128421;</span>
+          <div class="sidebar-item-content">
+            <span>Phase 2: Lab Build</span>
+            <div class="mini-progress">
+              <div class="mini-progress-bar phase-2-bg" id="prog-phase-2" style="width:0%"></div>
+            </div>
+            <span class="sidebar-progress-label" id="prog-phase-2-label">0 / 4</span>
+          </div>
+        </div>
+        <div class="sidebar-item" data-view="phase-3">
+          <span class="sidebar-icon phase-3-text">&#128270;</span>
+          <div class="sidebar-item-content">
+            <span>Phase 3: Practical Skills</span>
+            <div class="mini-progress">
+              <div class="mini-progress-bar phase-3-bg" id="prog-phase-3" style="width:0%"></div>
+            </div>
+            <span class="sidebar-progress-label" id="prog-phase-3-label">0 / 9</span>
+          </div>
+        </div>
+        <div class="sidebar-item" data-view="phase-4">
+          <span class="sidebar-icon phase-4-text">&#128196;</span>
+          <div class="sidebar-item-content">
+            <span>Phase 4: Resume Proof</span>
+            <div class="mini-progress">
+              <div class="mini-progress-bar phase-4-bg" id="prog-phase-4" style="width:0%"></div>
+            </div>
+            <span class="sidebar-progress-label" id="prog-phase-4-label">0 / 6</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-label">TOOLS</div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-item" data-view="quiz">
+          <span class="sidebar-icon">&#127183;</span>
+          <span>Flashcard Quiz</span>
+        </div>
+        <div class="sidebar-item" data-view="lab-guide">
+          <span class="sidebar-icon">&#129514;</span>
+          <span>AD Lab Guide</span>
+        </div>
+        <div class="sidebar-item" data-view="study-plan">
+          <span class="sidebar-icon">&#128197;</span>
+          <span>Weekly Study Plan</span>
+        </div>
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <div id="sidebar-footer">
+        <div id="overall-progress-label">Overall: <span id="overall-pct">0%</span></div>
+        <div id="overall-progress-bar-wrap">
+          <div id="overall-progress-bar"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+      <!-- Rendered by app.js -->
+      <div class="loading">Loading...</div>
+    </main>
+
+  </div>
+
+  <!-- ===== TOAST CONTAINER ===== -->
+  <div id="toast-container"></div>
+
+  <!-- ===== KEYBOARD HINT ===== -->
+  <div id="keyboard-hint" class="hidden">
+    <div id="keyboard-hint-box">
+      <div id="keyboard-hint-title">&#9875; Keyboard Shortcuts</div>
+      <div class="hint-row"><kbd>Space</kbd> Flip card</div>
+      <div class="hint-row"><kbd>&#8594;</kbd> Next card</div>
+      <div class="hint-row"><kbd>&#8592;</kbd> Previous card</div>
+      <div class="hint-row"><kbd>M</kbd> Mark as learned</div>
+      <div class="hint-row"><kbd>?</kbd> Toggle this help</div>
+      <div class="hint-row"><kbd>Esc</kbd> Go to Dashboard</div>
+      <button id="close-hint">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
